@@ -22,7 +22,7 @@ public class LinkedGrid {
 		while (i < size*size)
 		{
 			r = MyRandom.rand(1,8);
-			q = new RoomImpl(r,current);
+			
 			i++;
 		}
 	}
