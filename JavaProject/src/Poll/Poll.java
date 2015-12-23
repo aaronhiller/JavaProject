@@ -1,5 +1,5 @@
-package Poll;
-
 public class Poll {
+	
+	private int s;
 
 }
