@@ -1,4 +1,4 @@
 
-public class BlankRoom {
+public class BlankRoom extends RoomImpl {
 
 }

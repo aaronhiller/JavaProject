@@ -1,4 +1,4 @@
 
-public class SlowRoom {
+public class SlowRoom extends RoomImpl {
 
 }

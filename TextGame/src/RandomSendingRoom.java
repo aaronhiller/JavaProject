@@ -1,4 +1,4 @@
 
-public class RandomSendingRoom {
+public class RandomSendingRoom extends RoomImpl {
 
 }

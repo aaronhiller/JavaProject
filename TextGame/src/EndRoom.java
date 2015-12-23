@@ -1,4 +1,4 @@
 
-public class EndRoom {
+public class EndRoom extends RoomImpl {
 
 }

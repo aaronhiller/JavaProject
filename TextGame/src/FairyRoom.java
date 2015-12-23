@@ -1,4 +1,4 @@
 
-public class FairyRoom {
+public class FairyRoom extends RoomImpl {
 
 }
