@@ -3,10 +3,10 @@ abstract public class RoomImpl implements Room {
 	
 	private int type;
 	private static int ID = 0;
-	private int location;
+	private Coordinate location;
 	private int thisID;
 	
-	public RoomImpl(int t, int loc)
+	public RoomImpl(int t, Coordinate loc)
 	{
 		type = t;
 		loc = location;
@@ -24,7 +24,7 @@ abstract public class RoomImpl implements Room {
 		return thisID;
 	}
 	
-	public int getLocation()
+	public Coordinate getLocation()
 	{
 		return location;
 	}
