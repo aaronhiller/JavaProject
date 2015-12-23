@@ -8,11 +8,13 @@ public class MainFile {
 
 }
 
-//room 1 person who tells you which direction to go (don't know if he's telling the truth or not)
-//room 2 start room exit room
-//room 3 slow room, 2 turns to get out multiple types of slow rooms
-//room 4 blank room
-//room 5 random sending room
-//room 6 fairy room (you know is good)
+//room type 1 person who tells you which direction to go TRUTH TELLER
+//room type 2 person who tells you which direction to go LIAR (separate rooms for truth and liar)
+//room type 3 start room
+//room type 4 end room
+//room type 5 slow room, 2 turns to get out multiple types of slow rooms
+//room type 6 blank room
+//room type 7 random sending room
+//room type 8 fairy room (you know is good)
 
 //timed mode, race mode vs cpu or person, battle mode (stay away)
