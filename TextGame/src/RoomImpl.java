@@ -5,7 +5,11 @@ abstract public class RoomImpl implements Room {
 	private static int ID = 0;
 	private Coordinate location;
 	private int thisID;
-	
+	/**
+	 * 
+	 * @param t type of room
+	 * @param loc coordinates of room
+	 */
 	public RoomImpl(int t, Coordinate loc)
 	{
 		type = t;
