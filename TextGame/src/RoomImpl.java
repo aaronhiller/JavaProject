@@ -9,8 +9,8 @@ abstract public class RoomImpl implements Room {
 	public RoomImpl(int t, Coordinate loc)
 	{
 		type = t;
-		loc = location;
-		thisID = ID;
+		location = loc;
+		ID = thisID;
 		ID++;
 	}
 	
