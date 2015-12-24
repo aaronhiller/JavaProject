@@ -17,12 +17,17 @@ public class LinkedGrid {
 	{
 		int i = 0;
 		int r = -1;
+		boolean startMade = false;
+		boolean endMade = false;
 		Coordinate current = new Coordinate(1,1);
 		Room q = null;
 		while (i < size*size)
 		{
 			r = MyRandom.rand(1,8);
-			
+			if (r == 1)
+			{
+				
+			}
 			i++;
 		}
 	}
