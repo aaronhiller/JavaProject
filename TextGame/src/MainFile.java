@@ -10,6 +10,7 @@ public class MainFile {
 		System.out.print("size?");
 		size = kbReader.nextInt();
 		LinkedGrid gameBoard = new LinkedGrid(size);
+		gameBoard.initialize();
 	}
 
 }

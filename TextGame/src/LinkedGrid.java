@@ -9,6 +9,7 @@ public class LinkedGrid {
 	private Coordinate playerPos;
 	private Coordinate startRoom;
 	private Coordinate endRoom;
+	private int turnCounter;
 	
 	public LinkedGrid(int s)
 	{
@@ -17,6 +18,7 @@ public class LinkedGrid {
 		playerPos = null;
 		startRoom = null;
 		endRoom = null;
+		turnCounter = 0;
 	}
 	
 	public void randomize()
@@ -109,6 +111,7 @@ public class LinkedGrid {
 		{
 			playerPos = new Coordinate(playerPos.getX() + 1, playerPos.getY());
 		}
+		turnCounter++;
 		enterRoom();
 	}
 	
@@ -122,6 +125,7 @@ public class LinkedGrid {
 		{
 			playerPos = new Coordinate(playerPos.getX() - 1, playerPos.getY());
 		}
+		turnCounter++;
 		enterRoom();
 	}
 	
@@ -135,6 +139,7 @@ public class LinkedGrid {
 		{
 			playerPos = new Coordinate(playerPos.getX(), playerPos.getY() + 1);
 		}
+		turnCounter++;
 		enterRoom();
 	}
 	
@@ -148,6 +153,7 @@ public class LinkedGrid {
 		{
 			playerPos = new Coordinate(playerPos.getX(), playerPos.getY() - 1);
 		}
+		turnCounter++;
 		enterRoom();
 	}
 	
