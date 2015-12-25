@@ -18,3 +18,4 @@ public class MainFile {
 //room type 8 fairy room (you know is good)
 
 //timed mode, race mode vs cpu or person, battle mode (stay away)
+//seeds
