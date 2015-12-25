@@ -1,9 +1,15 @@
+import java.util.Scanner;
+
 
 public class MainFile {
 	
 	public static void main(String[] args)
 	{
-		System.out.print("how many rooms?");
+		Scanner kbReader = new Scanner(System.in);
+		int size;
+		System.out.print("size?");
+		size = kbReader.nextInt();
+		LinkedGrid gameBoard = new LinkedGrid(size);
 	}
 
 }
