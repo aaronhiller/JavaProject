@@ -99,6 +99,7 @@ public class LinkedGrid {
 	{
 		randomize();
 		playerPos = startRoom;
+		System.out.println(rooms.get(playerPos).message());
 	}
 	
 	public void moveRight()
@@ -160,6 +161,30 @@ public class LinkedGrid {
 	public void enterRoom()
 	{
 		System.out.println(rooms.get(playerPos).message());
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public HashMap<Coordinate, Room> getRooms() {
+		return rooms;
+	}
+
+	public Coordinate getPlayerPos() {
+		return playerPos;
+	}
+
+	public Coordinate getStartRoom() {
+		return startRoom;
+	}
+
+	public Coordinate getEndRoom() {
+		return endRoom;
+	}
+
+	public int getTurnCounter() {
+		return turnCounter;
 	}
 
 }
