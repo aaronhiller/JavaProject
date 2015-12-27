@@ -2,7 +2,7 @@
 abstract public class RoomImpl implements Room {
 	
 	private int type;
-	private static int ID = 0;
+	private static int ID = 1;
 	private Coordinate location;
 	private int thisID;
 	/**
@@ -14,7 +14,7 @@ abstract public class RoomImpl implements Room {
 	{
 		type = t;
 		location = loc;
-		ID = thisID;
+		thisID = ID;
 		ID++;
 	}
 	

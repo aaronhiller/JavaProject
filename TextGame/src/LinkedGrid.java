@@ -5,7 +5,7 @@ import java.util.Random;
 public class LinkedGrid {
 	
 	private int size;
-	private HashMap<Coordinate,Room> rooms;
+	private HashMap<Integer,Room> rooms;
 	private Coordinate playerPos;
 	private Coordinate startRoom;
 	private Coordinate endRoom;
@@ -14,7 +14,7 @@ public class LinkedGrid {
 	public LinkedGrid(int s)
 	{
 		size = s;
-		rooms = new HashMap<Coordinate,Room>();
+		rooms = new HashMap<Integer,Room>();
 		playerPos = null;
 		startRoom = null;
 		endRoom = null;
@@ -82,8 +82,10 @@ public class LinkedGrid {
 			{
 				q = new FairyRoom(r, current);
 			}
-			rooms.put(current, q);
-			if (current.getX() == i)
+			rooms.put(current.getID(), q);
+			System.out.println("Room created " + current.getX() + " " + current.getY());
+			System.out.println("Room ID: " + q.getSerialID());
+			if (current.getX() == size)
 			{
 				current = new Coordinate(1, current.getY() + 1);
 			}
@@ -93,13 +95,38 @@ public class LinkedGrid {
 			}
 			i++;
 		}
+		int check = -1;
+		Coordinate tempLoc = null;
+		if (!startMade)
+		{
+			check = MyRandom.rand(1,size*size);
+			tempLoc = rooms.get(check).getLocation();
+			rooms.remove(check);
+			rooms.put(check, new StartRoom(3,tempLoc));
+			startRoom = tempLoc;
+			startMade = true;
+		}
+		int tempCheck = check;
+		while (tempCheck == check)
+		{
+			check = MyRandom.rand(1,size*size);
+		}
+		if (!endMade)
+		{
+			tempLoc = rooms.get(check).getLocation();
+			rooms.remove(check);
+			rooms.put(check, new EndRoom(4, tempLoc));
+			endRoom = tempLoc;
+			endMade = true;
+		}
 	}
 	
 	public void initialize()
 	{
 		randomize();
 		playerPos = startRoom;
-		System.out.println(rooms.get(playerPos).message());
+		//System.out.println(playerPos.getID());
+		System.out.println(rooms.get(playerPos.getID()).message());
 	}
 	
 	public void moveRight()
@@ -110,7 +137,7 @@ public class LinkedGrid {
 		}
 		else
 		{
-			playerPos = new Coordinate(playerPos.getX() + 1, playerPos.getY());
+			playerPos = rooms.get(playerPos.getID() + 1).getLocation();
 		}
 		turnCounter++;
 		enterRoom();
@@ -124,7 +151,7 @@ public class LinkedGrid {
 		}
 		else
 		{
-			playerPos = new Coordinate(playerPos.getX() - 1, playerPos.getY());
+			playerPos = rooms.get(playerPos.getID() - 1).getLocation();
 		}
 		turnCounter++;
 		enterRoom();
@@ -138,7 +165,7 @@ public class LinkedGrid {
 		}
 		else
 		{
-			playerPos = new Coordinate(playerPos.getX(), playerPos.getY() + 1);
+			playerPos = rooms.get(playerPos.getID() + size).getLocation();
 		}
 		turnCounter++;
 		enterRoom();
@@ -152,7 +179,7 @@ public class LinkedGrid {
 		}
 		else
 		{
-			playerPos = new Coordinate(playerPos.getX(), playerPos.getY() - 1);
+			playerPos = rooms.get(playerPos.getID() - size).getLocation();
 		}
 		turnCounter++;
 		enterRoom();
@@ -160,14 +187,14 @@ public class LinkedGrid {
 	
 	public void enterRoom()
 	{
-		System.out.println(rooms.get(playerPos).message());
+		System.out.println(rooms.get(playerPos.getID()).message());
 	}
 
 	public int getSize() {
 		return size;
 	}
 
-	public HashMap<Coordinate, Room> getRooms() {
+	public HashMap<Integer, Room> getRooms() {
 		return rooms;
 	}
 

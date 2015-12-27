@@ -23,7 +23,9 @@ public class LinkedGridTest {
 		assertEquals(grid.getTurnCounter(), 0);
 		assertEquals(grid.getSize(), 4);
 		
-		
+		grid.moveRight();
+		grid.moveUp();
+		grid.moveLeft();
 		grid.moveDown(); //only direction that doesn't cause a NullPointer
 	}
 }
