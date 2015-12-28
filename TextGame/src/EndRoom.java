@@ -9,7 +9,7 @@ public class EndRoom extends RoomImpl {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "Congradulations, you have reached the end.";
+		return "Congratulations, you have reached the end.";
 	}
 
 }
