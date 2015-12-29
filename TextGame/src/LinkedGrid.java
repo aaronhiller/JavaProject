@@ -216,6 +216,28 @@ public class LinkedGrid {
 	public Room roomToTheRight() {
 		return rooms.get(playerPos.getID() + 1);
 	}
+	public Room roomToTheLeft() {
+		return rooms.get(playerPos.getID() - 1);
+	}
+	public Room roomToTheUp() {
+		return rooms.get(playerPos.getID() + size);
+	}
+	public Room roomToTheDown() {
+		return rooms.get(playerPos.getID() - size);
+	}
+	public Room randomAdjacentRoom() {
+		Random rand = new Random();
+		int randomAdjacentRoom = rand.nextInt(4);
+		if(randomAdjacentRoom == 0) {
+			return roomToTheRight();
+		} else if(randomAdjacentRoom == 1) {
+			return roomToTheLeft();
+		} else if(randomAdjacentRoom == 2) {
+			return roomToTheUp();
+		} else {
+			return roomToTheDown();
+		}
+	}
 
 }
 
