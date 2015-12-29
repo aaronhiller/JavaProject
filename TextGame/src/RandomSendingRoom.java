@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class RandomSendingRoom extends RoomImpl {
 
@@ -9,7 +10,13 @@ public class RandomSendingRoom extends RoomImpl {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "";
+		return "You have been sent to a random room";
+	}
+	
+	public int randomRoomID() {
+		Random rand = new Random();
+		int randomRoomID = rand.nextInt(16);
+		return randomRoomID;
 	}
 
 }

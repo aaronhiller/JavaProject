@@ -213,6 +213,9 @@ public class LinkedGrid {
 	public int getTurnCounter() {
 		return turnCounter;
 	}
+	public Room roomToTheRight() {
+		return rooms.get(playerPos.getID() + 1);
+	}
 
 }
 

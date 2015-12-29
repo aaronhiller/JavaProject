@@ -9,7 +9,7 @@ public class FairyRoom extends RoomImpl {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return ""; //something a fairy would say
+		return "The room to the right of you is a "; //something a fairy would say
 	}
 
 }

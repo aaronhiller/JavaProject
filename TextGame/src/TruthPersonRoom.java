@@ -9,7 +9,7 @@ public class TruthPersonRoom extends PersonRoom {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "";
+		return "The room to your right is a ";
 	}
 
 }
