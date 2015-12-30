@@ -1,6 +1,7 @@
 
 public class SlowRoom extends RoomImpl {
 
+	private LinkedGrid grid;
 	public SlowRoom(int t, Coordinate loc) {
 		super(t, loc);
 	}
@@ -9,11 +10,13 @@ public class SlowRoom extends RoomImpl {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "You have fallen into a patch of quicksand. It will take an extra turn to get out. Proceed?";
+		return "You have fallen into a patch of quicksand. Proceed?";
 	}
 	
-	public String message2() {
-		return "Which way would you like to go? ";
+	public LinkedGrid getGameBoard(LinkedGrid gameBoard) {
+		grid = gameBoard;
+		return grid;
 	}
+	
 
 }

@@ -32,5 +32,6 @@ abstract public class RoomImpl implements Room {
 	{
 		return location;
 	}
+	//public LinkedGrid getGameBoard()
 
 }

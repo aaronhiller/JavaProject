@@ -1,6 +1,7 @@
 
 public class TruthPersonRoom extends PersonRoom {
 
+	private LinkedGrid grid;
 	public TruthPersonRoom(int t, Coordinate loc) {
 		super(t, loc);
 	}
@@ -9,7 +10,12 @@ public class TruthPersonRoom extends PersonRoom {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "The room to your right is a ";
+		return "The room to your right is a " + grid.roomToTheRight().getType();
+	}
+	
+	public LinkedGrid getGameBoard(LinkedGrid gameBoard) {
+		grid = gameBoard;
+		return grid;
 	}
 
 }
