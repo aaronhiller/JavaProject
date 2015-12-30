@@ -32,7 +32,7 @@ abstract public class RoomImpl implements Room {
 	{
 		return location;
 	}
-	//public LinkedGrid getGameBoard()
+	
 	public String roomTypeAsString(Room room) {
 		if(room.getType() == 1) {
 			return "Truth Teller Room";

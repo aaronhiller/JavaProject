@@ -238,6 +238,36 @@ public class LinkedGrid {
 			return roomToTheDown();
 		}
 	}
+	public Room randomWrongAdjacentRoom() {
+		Random rand = new Random();
+		int randomAdjacentRoom = rand.nextInt(3);
+		if(randomAdjacentRoom == 0) {
+			return roomToTheUp();
+		} else if(randomAdjacentRoom == 1) {
+			return roomToTheLeft();
+		} else {
+			return roomToTheDown();
+		}
+	}
+	public String roomTypeAsString(Room room) {
+		if(room.getType() == 1) {
+			return "Truth Teller Room";
+		} else if(room.getType() == 2) {
+			return "Lying person room";
+		} else if(room.getType() == 3) {
+			return "Start Room";
+		} else if(room.getType() == 4) {
+			return "End Room";
+		} else if(room.getType() == 5) {
+			return "Slow Room";
+		} else if(room.getType() == 6) {
+			return "Empty Room";
+		} else if(room.getType() == 7) {
+			return "Random Sending Room";
+		} else {
+			return "Fairy Room";
+		}
+	}
 
 }
 

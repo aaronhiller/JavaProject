@@ -10,12 +10,14 @@ public class TruthPersonRoom extends PersonRoom {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "The room to your right is a " + grid.roomToTheRight().getType();
+		return "The room to your right is a " + roomTypeAsString(grid.roomToTheRight());
 	}
 	
 	public LinkedGrid getGameBoard(LinkedGrid gameBoard) {
 		grid = gameBoard;
 		return grid;
+		
 	}
+	
 
 }
