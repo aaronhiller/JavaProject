@@ -9,7 +9,7 @@ public class StartRoom extends RoomImpl {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "Which way would you like to go?";
+		return "You are in the Start Room. Which way would you like to go?";
 	}
 
 }

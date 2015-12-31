@@ -5,6 +5,7 @@ abstract public class RoomImpl implements Room {
 	private static int ID = 1;
 	private Coordinate location;
 	private int thisID;
+	public LinkedGrid grid;
 	/**
 	 * 
 	 * @param t type of room
@@ -51,6 +52,10 @@ abstract public class RoomImpl implements Room {
 		} else {
 			return "Fairy Room";
 		}
+	}
+	public LinkedGrid getGameBoard(LinkedGrid gameBoard) {
+		grid = gameBoard;
+		return grid;
 	}
 
 }

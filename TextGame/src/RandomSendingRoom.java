@@ -10,7 +10,7 @@ public class RandomSendingRoom extends RoomImpl {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "You have been sent to a random room";
+		return "You have been sent to a random room. Which way would you like to go?";
 	}
 	
 	public int randomRoomID() {
