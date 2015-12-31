@@ -12,7 +12,7 @@ public class MainFile {
 		LinkedGrid gameBoard = new LinkedGrid(size);
 		gameBoard.initialize();
 		
-		while(gameBoard.getRooms().get(gameBoard.getPlayerPos()).getType() != 4) {
+		while(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() != 4) {
 			System.out.print(NEXT_MESSAGE);
 			String direction = kbReader.next();
 			if(direction.equalsIgnoreCase("up") || direction.equalsIgnoreCase("north")) {
