@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 public class MainFile {
-	public static final String nextMessage = "Which way would you like to go? ";
+	public static final String NEXT_MESSAGE = "Which way would you like to go? ";
 	public static void main(String[] args)
 	{
 		Scanner kbReader = new Scanner(System.in);
