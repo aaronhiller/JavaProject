@@ -10,13 +10,7 @@ public class SlowRoom extends RoomImpl {
 	 * @return a string that explains the room
 	 */
 	public String message() {
-		return "You have fallen into a patch of quicksand. Proceed?";
-	}
-	
-	
-	public LinkedGrid getGameBoard(LinkedGrid gameBoard) {
-		grid = gameBoard;
-		return grid;
+		return "You have fallen into a patch of quicksand.";
 	}
 	
 

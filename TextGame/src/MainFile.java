@@ -7,10 +7,31 @@ public class MainFile {
 	{
 		Scanner kbReader = new Scanner(System.in);
 		int size;
-		System.out.print("size?");
+		System.out.print("size? ");
 		size = kbReader.nextInt();
 		LinkedGrid gameBoard = new LinkedGrid(size);
 		gameBoard.initialize();
+		
+		while(gameBoard.getRooms().get(gameBoard.getPlayerPos()).getType() != 4) {
+			System.out.print(NEXT_MESSAGE);
+			String direction = kbReader.next();
+			if(direction.equalsIgnoreCase("up") || direction.equalsIgnoreCase("north")) {
+				gameBoard.moveUp();
+			} else if(direction.equalsIgnoreCase("down") || direction.equalsIgnoreCase("south")) {
+				gameBoard.moveDown();
+			} else if(direction.equalsIgnoreCase("left") || direction.equalsIgnoreCase("west")) {
+				gameBoard.moveLeft();
+			} else if(direction.equalsIgnoreCase("right") || direction.equalsIgnoreCase("east")) {
+				gameBoard.moveRight();
+			} else {
+				System.out.println("Invalid Command. Try again");
+			}
+			
+			
+			
+		}
+		System.out.println(gameBoard.getRooms().get(gameBoard.getPlayerPos()).message());
+		System.out.println("Turn Counter: " + gameBoard.getTurnCounter());
 	}
 
 }

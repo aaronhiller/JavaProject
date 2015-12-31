@@ -1,6 +1,6 @@
 
 public class LyingPersonRoom extends PersonRoom {
-	private LinkedGrid grid;
+	
 	public LyingPersonRoom(int t, Coordinate loc) {
 		super(t, loc);
 	}
@@ -8,14 +8,9 @@ public class LyingPersonRoom extends PersonRoom {
 	 * 
 	 * @return a string that explains the room
 	 */
-	public String message() {
+	public String message(LinkedGrid grid) {
 		return "The room to the right is a " + roomTypeAsString(grid.randomWrongAdjacentRoom()); 
 	}
-	
-	public LinkedGrid getGameBoard(LinkedGrid gameBoard) {
-		grid = gameBoard;
-		return grid;
-	}
-		
+
 
 }
