@@ -268,6 +268,9 @@ public class LinkedGrid {
 			return "Fairy Room";
 		}
 	}
+	public void incrementCounter() {
+		turnCounter++;
+	}
 
 }
 
