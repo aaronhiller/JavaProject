@@ -46,7 +46,7 @@ public class MainFile {
 				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
 			}
 		}
-		System.out.println(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message());
+		//System.out.println(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message());
 		System.out.println("Turn Counter: " + gameBoard.getTurnCounter());
 	}
 
