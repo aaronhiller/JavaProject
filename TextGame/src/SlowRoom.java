@@ -9,7 +9,7 @@ public class SlowRoom extends RoomImpl {
 	 * 
 	 * @return a string that explains the room
 	 */
-	public String message() {
+	public String message(LinkedGrid gameBoard) {
 		return "You have fallen into a patch of quicksand.";
 	}
 	

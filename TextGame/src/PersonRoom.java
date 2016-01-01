@@ -9,11 +9,11 @@ public class PersonRoom extends RoomImpl {
 	 * 
 	 * @return a string that explains the room
 	 */
-	public String message() {
+	public String message(LinkedGrid gameBoard) {
 		if(randomNumber() == 0) { //The person will tell a lie
-			return "The room to the right is a " + roomTypeAsString(grid.randomWrongAdjacentRoom());
+			return "The room to the right is a " + roomTypeAsString(gameBoard.randomWrongAdjacentRoom());
 		} else { //The person will tell the truth
-			return "The room to the right is a " + roomTypeAsString(grid.roomToTheRight());
+			return "The room to the right is a " + roomTypeAsString(gameBoard.roomToTheRight());
 		}
 	}
 	

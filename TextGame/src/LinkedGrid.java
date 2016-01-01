@@ -126,7 +126,7 @@ public class LinkedGrid {
 		randomize();
 		playerPos = startRoom;
 		//System.out.println(playerPos.getID());
-		System.out.println(rooms.get(playerPos.getID()).message());
+		System.out.println(rooms.get(playerPos.getID()).message(this));
 	}
 	
 	public void moveRight()
@@ -187,7 +187,7 @@ public class LinkedGrid {
 	
 	public void enterRoom()
 	{
-		System.out.println(rooms.get(playerPos.getID()).message());
+		System.out.println(rooms.get(playerPos.getID()).message(this));
 	}
 
 	public int getSize() {

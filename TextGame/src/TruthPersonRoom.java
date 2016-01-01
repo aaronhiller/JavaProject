@@ -9,8 +9,8 @@ public class TruthPersonRoom extends PersonRoom {
 	 * 
 	 * @return a string that explains the room
 	 */
-	public String message() {
-		return "The room to your right is a " + roomTypeAsString(grid.roomToTheRight());
+	public String message(LinkedGrid gameBoard) {
+		return "The room to your right is a " + roomTypeAsString(gameBoard.roomToTheRight());
 	}
 	
 	public LinkedGrid getGameBoard(LinkedGrid gameBoard) {

@@ -8,9 +8,7 @@ public class LyingPersonRoom extends PersonRoom {
 	 * 
 	 * @return a string that explains the room
 	 */
-	public String message(LinkedGrid grid) {
-		return "The room to the right is a " + roomTypeAsString(grid.randomWrongAdjacentRoom()); 
+	public String message(LinkedGrid gameBoard) {
+		return "The room to the right is a " + roomTypeAsString(gameBoard.randomWrongAdjacentRoom()); 
 	}
-
-
 }

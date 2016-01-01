@@ -8,7 +8,7 @@ public class EndRoom extends RoomImpl {
 	 * 
 	 * @return a string that explains the room
 	 */
-	public String message() {
+	public String message(LinkedGrid gameBoard) {
 		return "Congratulations, you have reached the end.";
 	}
 

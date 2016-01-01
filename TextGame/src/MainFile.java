@@ -29,21 +29,21 @@ public class MainFile {
 			
 			
 			if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 1) {
-				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
+				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 2) {
-				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
+				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 3) {
-				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
+				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			}else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 4) {
-				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
+				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 5) {
-				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
+				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 6) {
-				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
+				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 7) {
-				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
+				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else {
-				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message();
+				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			}
 		}
 		//System.out.println(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message());
