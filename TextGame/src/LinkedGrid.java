@@ -240,13 +240,42 @@ public class LinkedGrid {
 	}
 	public Room randomWrongAdjacentRoom() {
 		Random rand = new Random();
-		int randomAdjacentRoom = rand.nextInt(3);
-		if(randomAdjacentRoom == 0) {
-			return roomToTheUp();
-		} else if(randomAdjacentRoom == 1) {
-			return roomToTheLeft();
+		int randomAdjacentRoomEdge = rand.nextInt(2);
+		int randomAdjacentRoomMiddle = rand.nextInt(3);
+		if(playerPos.getY() == size) {
+			if(playerPos.getX() == 1) {
+				return roomToTheDown();
+			} else {
+				if(randomAdjacentRoomEdge == 0) {
+					return roomToTheLeft();
+				} else {
+					return roomToTheDown();
+				}
+			}
+		} else if(playerPos.getY() == 1) {
+			if(playerPos.getX() == 1) {
+				return roomToTheUp();
+			} else {
+				if(randomAdjacentRoomEdge == 0) {
+					return roomToTheLeft();
+				} else {
+					return roomToTheUp();
+				}
+			}
+		} else if(playerPos.getX() == 1) {
+			if(randomAdjacentRoomEdge == 0) {
+				return roomToTheUp();
+			} else {
+				return roomToTheDown();
+			}
 		} else {
-			return roomToTheDown();
+			if(randomAdjacentRoomMiddle == 0) {
+				return roomToTheUp();
+			} else if(randomAdjacentRoomMiddle == 1) {
+				return roomToTheDown();
+			} else {
+				return roomToTheLeft();
+			}
 		}
 	}
 	public String roomTypeAsString(Room room) {
