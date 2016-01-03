@@ -9,7 +9,7 @@ public class FairyRoom extends RoomImpl {
 	 * @return a string that explains the room
 	 */
 	public String message(LinkedGrid gameBoard) {
-		if (grid.getPlayerPos().getX() == gameBoard.getSize()) {
+		if (gameBoard.getPlayerPos().getX() == gameBoard.getSize()) {
 			return "You have encountered a Fairy. It tells you : "
 					+ "\"The room to the left of you is a " + roomTypeAsString(gameBoard.roomToTheLeft());
 		} else {

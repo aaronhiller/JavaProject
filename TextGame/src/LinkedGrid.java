@@ -138,9 +138,8 @@ public class LinkedGrid {
 		else
 		{
 			playerPos = rooms.get(playerPos.getID() + 1).getLocation();
+			enterRoom();
 		}
-		turnCounter++;
-		enterRoom();
 	}
 	
 	public void moveLeft()
@@ -152,9 +151,8 @@ public class LinkedGrid {
 		else
 		{
 			playerPos = rooms.get(playerPos.getID() - 1).getLocation();
+			enterRoom();
 		}
-		turnCounter++;
-		enterRoom();
 	}
 	
 	public void moveUp()
@@ -166,9 +164,8 @@ public class LinkedGrid {
 		else
 		{
 			playerPos = rooms.get(playerPos.getID() + size).getLocation();
+			enterRoom();
 		}
-		turnCounter++;
-		enterRoom();
 	}
 	
 	public void moveDown()
@@ -180,13 +177,13 @@ public class LinkedGrid {
 		else
 		{
 			playerPos = rooms.get(playerPos.getID() - size).getLocation();
+			enterRoom();
 		}
-		turnCounter++;
-		enterRoom();
 	}
 	
 	public void enterRoom()
 	{
+		turnCounter++;
 		System.out.println(rooms.get(playerPos.getID()).message(this));
 	}
 
