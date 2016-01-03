@@ -42,6 +42,7 @@ public class MainFile {
 			} else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 6) {
 				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 7) {
+				gameBoard.sendToRandomRoom();
 				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else {
 				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);

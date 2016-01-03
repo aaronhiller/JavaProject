@@ -294,6 +294,10 @@ public class LinkedGrid {
 			return "Fairy Room";
 		}
 	}
+	public void sendToRandomRoom() {
+		int randRoom = MyRandom.rand(1, size);
+		playerPos = rooms.get(randRoom).getLocation();
+	}
 	public void incrementCounter() {
 		turnCounter++;
 	}

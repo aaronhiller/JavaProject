@@ -11,10 +11,10 @@ public class FairyRoom extends RoomImpl {
 	public String message(LinkedGrid gameBoard) {
 		if (gameBoard.getPlayerPos().getX() == gameBoard.getSize()) {
 			return "You have encountered a Fairy. It tells you : "
-					+ "\"The room to the left of you is a " + roomTypeAsString(gameBoard.roomToTheLeft());
+					+ "\"The room to the left of you is a " + roomTypeAsString(gameBoard.roomToTheLeft()) + "\"";
 		} else {
 			return "You have encountered a Fairy. It tells you : "
-				+ "\"The room to the right of you is a " + roomTypeAsString(gameBoard.roomToTheRight()); //something a fairy would say
+				+ "\"The room to the right of you is a " + roomTypeAsString(gameBoard.roomToTheRight()) + "\""; //something a fairy would say
 		}
 	}
 

@@ -13,10 +13,8 @@ public class RandomSendingRoom extends RoomImpl {
 		return "You have been sent to a random room.";
 	}
 	
-	public int randomRoomID() {
-		Random rand = new Random();
-		int randomRoomID = rand.nextInt(16);
-		return randomRoomID;
+	public int randomRoomID(int size) {
+		return MyRandom.rand(1, size);
 	}
 
 }
