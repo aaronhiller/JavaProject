@@ -100,6 +100,10 @@ public class LinkedGrid {
 		if (!startMade)
 		{
 			check = MyRandom.rand(1,size*size);
+			while (rooms.get(check).getType() == 4)
+			{
+				check = MyRandom.rand(1,size*size);
+			}
 			tempLoc = rooms.get(check).getLocation();
 			rooms.remove(check);
 			rooms.put(check, new StartRoom(3,tempLoc));
