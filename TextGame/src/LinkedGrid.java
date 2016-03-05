@@ -299,11 +299,17 @@ public class LinkedGrid {
 		}
 	}
 	public void sendToRandomRoom() {
-		int randRoom = MyRandom.rand(1, size);
+		int randRoom = MyRandom.rand(1, size * size);
 		playerPos = rooms.get(randRoom).getLocation();
+		enterRoom();
 	}
+	
 	public void incrementCounter() {
 		turnCounter++;
+	}
+	
+	public void decrementCounter() {
+		turnCounter--;
 	}
 
 }

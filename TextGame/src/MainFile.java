@@ -43,6 +43,7 @@ public class MainFile {
 				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else if(gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).getType() == 7) {
 				gameBoard.sendToRandomRoom();
+				gameBoard.decrementCounter();
 				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);
 			} else {
 				gameBoard.getRooms().get(gameBoard.getPlayerPos().getID()).message(gameBoard);

@@ -20,6 +20,7 @@ public class LinkedGridTest {
 	
 	@Test
 	public void testInitialize() {
+		System.out.println(MyRandom.rand(1, 8));
 		grid.initialize();
 		System.out.println(grid.getRooms().get(room));
 		startRoom = grid.getStartRoom();
